@@ -1,85 +1,41 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import SEO from '../src/components/commons/SEO'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <>
+      <SEO headTitle='Pinho Bravo' />
+      <div className='h-100v bg-top-img bg-cover bg-center img-top'>
+        <div className='container mx-auto px-10 py-4'>
+          <div className='flex justify-between'>
+            <h3>Pinho Bravo</h3>
+            <span>Menu</span>
+          </div>
+          <div className="h-100v flex flex-col justify-center gap-10">
+            <h1 className='text-5xl font-sans font-bold tracking-wide text-white text-center'>Conforto e Qualidade em Campos do Jordão</h1>
+            <button type='button' className='text-xl font-semibold text-white mx-5 px-7 py-4 bg-orange-400'>
+              Mais Informações
+            </button>
+          </div>
         </div>
-      </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
-    </div>
+      </div>
+      <article className="h-100v bg-bg-article px-10 text-color-text">
+        <div className="container mx-auto flex flex-col justify-evenly h-full">
+          <Image src='/imgs/house1.jpg' width={190} height={190} alt="Imagem da pousada" className='mx-auto rounded'/>
+          <h1 className='text-3xl text-center font-serif uppercase font-bold'>Seu refugído em campos do jordão</h1>
+          <div className='text-base indent-6 font-light'>
+            <p>
+              Os chalés pinho bravo são o melhor lugar para você fugir da correria da cidade grande. Um lugar tranquilo e aconchegante para você  e sua familia passarem os melhores dias na cidade.
+            </p>
+            <p>
+              Com 12 chalés a disposição, ocupando uma aréa de Xm² em uma região tranquila da cidade e proporcionando um bom contato com a natureza.
+            </p>
+          </div>
+        </div>
+      </article>
+    </>
   )
 }
 
