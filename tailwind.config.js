@@ -25,7 +25,9 @@ module.exports = {
 
       colors: {
         'bg-article': '#F9F9FF',
+        'bg-galery' : '#4B8077',
         'color-text' : '#2F4858',
+        
       }
     },
   },
