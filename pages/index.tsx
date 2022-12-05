@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Carousel, { CarouselItem } from '../src/components/commons/Carousel'
 import SEO from '../src/components/commons/SEO'
 
 const Home: NextPage = () => {
@@ -68,15 +69,12 @@ const Home: NextPage = () => {
           <p className='text-xl text-white text-center font-serif my-5 '>
             Conheça um pouco dos nossos chalés, veja um pouco do nosso ambiente
           </p>
-          <div className="relative overflow-auto">
-            <div className="flex overflow-x-auto gap-5 snap-x ">
-              <Image src="/imgs/galery/galery1.jpg" width={300} height={400} alt="Galery1" />
-              <Image src="/imgs/galery/galery2.jpg" width={400} height={400} alt="Galery1" />
-              <Image src="/imgs/galery/galery1.jpg" width={300} height={400} alt="Galery1" />
-              <Image src="/imgs/galery/galery2.jpg" width={400} height={400} alt="Galery1" />
-            </div>
-
-          </div>
+          <Carousel>
+            <CarouselItem>Item 1</CarouselItem>
+            <CarouselItem>Item 2</CarouselItem>
+            <CarouselItem>Item 3</CarouselItem>
+            <CarouselItem>Item 4</CarouselItem>
+          </Carousel>
         </div>
       </article>
     </>
