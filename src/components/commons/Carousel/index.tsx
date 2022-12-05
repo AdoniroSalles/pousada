@@ -8,7 +8,7 @@ type CarouselItemProps = {
 }
 
 type CarouselProps = {
-    children: ReactNode | ReactElement
+    children: ReactNode
 }
 
 export const CarouselItem = ({ children, width }: CarouselItemProps) => {
@@ -73,7 +73,7 @@ const Carousel = ({ children }: CarouselProps) => {
             <div className="inner" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
                 {
                     React.Children.map(children, (child, index) => {
-                        return React.cloneElement(child, { width: "100%" });
+                        return React.cloneElement(child as ReactElement, { width: "100%" });
                     })
                 }
             </div>
